@@ -21,9 +21,10 @@ class MyTestCase(unittest.TestCase):
 
         print(self.df_dlr['全月预收规保'])
 
-        writer = pd.ExcelWriter('resources/20210506.xlsx')
+        writer = pd.ExcelWriter('resources/result.xlsx')
         self.df_dlr.to_excel(writer, sheet_name = '代理人')
         writer.save()
+        writer.close()
 
 
 if __name__ == '__main__':
